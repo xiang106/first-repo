@@ -1,0 +1,19 @@
+---
+title: "Sept25class"
+format: html
+editor: visual
+embed-resources: true
+---
+
+```{r}
+
+library(tidyverse)
+
+storms |>
+  filter(status == "hurricane")|>
+  ggplot()+
+  geom_point(mapping = aes(x = pressure,
+                          y = wind))+
+  theme_minimal()
+
+```
